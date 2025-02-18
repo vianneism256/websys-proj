@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin: 0; /* Removes default body margin */
+            height: 100vh; /* Full height */
+            display: flex;
+            flex-direction: column;
+        }
+
+
+
+        nav {
+            background: black;
+            padding: 30px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 30px;
+        }
+
+        nav a.active {
+        background: white;
+        color: black;
+        padding: 5px 10px;
+        border-radius: 5px;
+        }
+
+
+        .welcometext {
+
+            justify-content: center;
+            overflow: auto;
+        }
+
+
+
+        footer {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="faq.html">FAQ</a>
+    </nav>
+
+    <div class="hometext">
+            <h1>The Secret Life of Vianne Louie Navida</h1>
+            <p>This is my project for Web Systems and Development. The contents of this website include my favorite movies, albums, moments with friends, FAQ. etc</p>
+    </div>
+
+    
+
+
+
+
+    <footer>
+        <p>&copy; 2025 Vianne Louie Navida. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

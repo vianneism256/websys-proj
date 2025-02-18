@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav {
+            background: black;
+            padding: 30px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 30px;
+        }
+
+        nav a.active {
+            background: white;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .gallery-container {
+            display: flex;
+            margin-top: 20px;
+            gap: 20px;
+            max-width: 900px;
+        }
+
+        .preview {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid black;
+            padding: 10px;
+            background: #f8f8f8;
+            border-radius: 10px;
+            height: 400px;
+        }
+
+        .preview img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .thumbnails {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 0.3;
+        }
+
+        .thumbnails img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 2px solid #ccc;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .thumbnails img:hover {
+            border-color: black;
+            transform: scale(1.1);
+        }
+
+        footer {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="faq.html">FAQ</a>
+    </nav>
+
+    <h1>Gallery</h1>
+
+    <div class="gallery-container">
+        <!-- Left side: Large Preview Image -->
+        <div class="preview">
+            <img id="largeImage" src="homepic1.jpg" alt="Selected Image">
+        </div>
+
+        <!-- Right side: Small Thumbnails -->
+        <div class="thumbnails">
+            <img src="homepic1.jpg" alt="Thumbnail 1" onclick="changeImage('homepic1.jpg')">
+            <img src="homepic2.jpg" alt="Thumbnail 1" onclick="changeImage('homepic2.jpg')">
+            <img src="homepic3.jpg" alt="Thumbnail 1" onclick="changeImage('homepic3.jpg')">
+            <img src="homepic4.jpg" alt="Thumbnail 1" onclick="changeImage('homepic4.jpg')">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Vianne Louie Navida. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function changeImage(imageSrc) {
+            document.getElementById("largeImage").src = imageSrc;
+        }
+    </script>
+
+</body>
+</html>
